@@ -1,4 +1,4 @@
-<h1 align="center"> Interpretador-Tiny </h1>
+<h1 align="center"> Interpretador-Tiny</h1>
 <div style="display: inline-block;">
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/> 
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg"/> 
