@@ -16,7 +16,7 @@ O objetivo deste projeto é desenvolver um interpretador para a linguagem Tiny, 
 - Variáveis e Entrada de Usuário: Identificadores (variáveis) podem ser usados para armazenar números inteiros. Além disso, a linguagem suporta leitura de valores inteiros do usuário (read).
 - Operadores Aritméticos e Lógicos Suportados: Adição (+), subtração (-), multiplicação (*), divisão (/), resto da divisão (%), igual (==), diferente (!=), menor (<), maior (>), menor ou igual (<=) e maior ou igual (>=).
 
-<strong><h4>Somatorio.tiny :</h4></strong>
+<strong><h4>Exemplo de programa em Tiny: Somatorio.tiny :</h4></strong>
 ```
 program
     sum = 0;
@@ -33,12 +33,12 @@ program
 - ```Lexema.py```: Define a estrutura de dados para representar um token durante a análise léxica.
 - ```Tipos_de_Tokens.py```: Enumera todos os tipos de tokens que podem ser encontrados durante a análise léxica.
 - ```Tabela_de_Tokens.py```: Associa os tipos de tokens com os seus respectivos tokens.
-- ```Maquina_de_Estados.py```: Implementa a lógica para análise léxica da linguagem Tiny usando uma máquina de 8 estados de transição.
-- ```Parser.py```: Responsável pela análise sintática do código fonte Tiny e pela geração da árvore de análise sintática.
+- ```Maquina_de_Estados.py```: Implementa a lógica para análise léxica da linguagem Tiny usando uma máquina de oito estados de transição.
+- ```Parser.py```: Arquivo de execução, responsável pela análise sintática do código fonte Tiny e pela geração da árvore de análise sintática.
 - ```Expressoes.py```: Contém classes para representar expressões aritméticas e lógicas, bem como variáveis e entrada de usuário.
 - ```Comandos.py```: Contém as classes que representam os diferentes tipos de comandos suportados pela linguagem Tiny, como atribuição, saída, condicionais e loops.
 
-<strong><h4>Lexeme.py :</h4></strong>
+<strong><h4>Classe base: Lexeme.py :</h4></strong>
 ```python
 class Lexema:
     
@@ -46,6 +46,22 @@ class Lexema:
         self.token = token
         self.tipo_token = tipo_token
         self.linha = linha
+```
+
+## Instruções de Execução
+
+No terminal, execute a seguinte instrução:
+```
+python3 Parser.py
+```
+- Para modificar o arquivo teste, utilize a função ```iniciar_maquina_de_estados```, substituindo "Testes_Interpretador/somatorio.tiny" por qualquer um dos outros arquivos contidos na pasta ```Testes_Interpretador```:
+
+```python
+def iniciar_maquina_de_estados(self):
+    self.Maquina = Maquina_de_Estados(False, ' ')
+    self.Maquina.analizador_lexico(self.Maquina.ler_arquivo('Testes_Interpretador/somatorio.tiny'))
+    self.lista = self.Maquina.lista_de_Tokens
+    self.token_aux = self.lista[self.controle]
 ```
 
 ## Especificações do Dispositivo Utilizado
