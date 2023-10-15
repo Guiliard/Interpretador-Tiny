@@ -11,13 +11,16 @@ O objetivo deste projeto é desenvolver um interpretador para a linguagem Tiny, 
 
 ## Funcionalidades da Linguagem Tiny
 
+- Estrutura do Programa: Um programa em Tiny começa com a palavra-reservada **program** seguida de um bloco de comandos.
 - Comandos Suportados: O interpretador suporta quatro tipos de comandos: comandos condicionais (if), comandos de repetição (while), comandos de atribuição (id = expr) e comandos de saída (output expr).
 - Expressões Lógicas e Aritméticas: A linguagem suporta expressões lógicas simples em comandos condicionais e de repetição, bem como expressões aritméticas sobre números inteiros.
 - Variáveis e Entrada de Usuário: Identificadores (variáveis) podem ser usados para armazenar números inteiros. Além disso, a linguagem suporta leitura de valores inteiros do usuário (read).
 - Operadores Aritméticos e Lógicos Suportados: Adição (+), subtração (-), multiplicação (*), divisão (/), resto da divisão (%), igual (==), diferente (!=), menor (<), maior (>), menor ou igual (<=) e maior ou igual (>=).
+- Comentários: Comentários de uma linha são definidos a partir do símbolo <i>hashtag</i> (#).
 
 <strong><h4>Exemplo de programa em Tiny: Somatorio.tiny :</h4></strong>
 ```
+# somatorio em tiny
 program
     sum = 0;
     i = read;
@@ -39,26 +42,6 @@ program
 - ```Comandos.py```: Contém as classes que representam os diferentes tipos de comandos suportados pela linguagem Tiny, como atribuição, saída, condicionais e loops.
 - ```main.py```: Arquivo de Execução
 
-<strong><h4>Classe base: Lexeme.py :</h4></strong>
-
-```python
-class Lexema:
-    
-    def __init__(self, token, tipo_token, linha):
-        self.token = token
-        self.tipo_token = tipo_token
-        self.linha = linha
-```
-
-## Instruções de Execução
-
-No terminal, execute as seguintes instruções:
-```
-cd Interpretador_Tiny
-python3 main.py
-```
-- Para alterar o arquivo teste, modifique a string ```nome_arq```, substituindo "somatorio.tiny" por qualquer um dos nove arquivos contidos na pasta ```Testes_Interpretador```.
-
 <strong><h4>main.py:</h4></strong>
 
 ```python
@@ -68,6 +51,15 @@ def main ():
     object_interpretador = Interpretador.inicio(nome_arq)
     object_interpretador.executar()
 ```
+
+## Instruções de Execução
+
+No terminal, execute as seguintes instruções:
+```
+cd Interpretador_Tiny
+python3 main.py
+```
+- Para alterar o arquivo teste, modifique a string ```nome_arq```, contida no arquivo ```main.py```, substituindo "somatorio.tiny" por qualquer um dos nove arquivos contidos na pasta ```Testes_Interpretador```.
 
 ## Especificações do Dispositivo Utilizado
 
