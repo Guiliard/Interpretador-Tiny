@@ -54,7 +54,7 @@ No terminal, execute a seguinte instrução:
 ```
 python3 Parser.py
 ```
-- Para modificar o arquivo teste, utilize a função ```iniciar_maquina_de_estados```, substituindo "somatorio.tiny" por qualquer um dos nove arquivos contidos na pasta ```Testes_Interpretador```:
+- Para modificar o arquivo teste, utilize a função ```iniciar_maquina_de_estados```, substituindo "somatorio.tiny" por qualquer um dos nove arquivos contidos na pasta ```Testes_Interpretador```.
 
 <strong><h4>Função de inicialização (leitura):</h4></strong>
 ```python
