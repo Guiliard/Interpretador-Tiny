@@ -39,14 +39,14 @@ class Parser:
         self.controle += 1  
         self.token_aux = self.lista[self.controle]
 
-    def iniciar_maquina_de_estados(self):
+    def iniciar_maquina_de_estados(self, nome_arq):
         self.Maquina = Maquina_de_Estados(False, ' ')
-        self.Maquina.analizador_lexico(self.Maquina.ler_arquivo('Testes_Interpretador/somatorio.tiny'))
+        self.Maquina.analizador_lexico(self.Maquina.ler_arquivo(nome_arq))
         self.lista = self.Maquina.lista_de_Tokens
         self.token_aux = self.lista[self.controle]
     
-    def inicio(self):
-        self.iniciar_maquina_de_estados()
+    def inicio(self, nome_arq):
+        self.iniciar_maquina_de_estados(nome_arq)
         self.tamanho_lista = len(self.lista)
         object_command = self.procProgram()
         self.progredir(TipoToken.END_OF_FILE)
@@ -293,7 +293,3 @@ class Parser:
         object_const_int_expr = Const_Int_Expr (line, num)
         
         return object_const_int_expr
-        
-Parser_teste = Parser()
-object_interpretador = Parser_teste.inicio()
-object_interpretador.executar()
