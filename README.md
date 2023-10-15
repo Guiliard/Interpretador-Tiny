@@ -34,9 +34,10 @@ program
 - ```Tipos_de_Tokens.py```: Enumera todos os tipos de tokens que podem ser encontrados durante a análise léxica.
 - ```Tabela_de_Tokens.py```: Associa os tipos de tokens com os seus respectivos tokens.
 - ```Maquina_de_Estados.py```: Implementa a lógica para análise léxica da linguagem Tiny usando uma máquina de oito estados de transição.
-- ```Parser.py```: Arquivo de execução, responsável pela análise sintática do código fonte Tiny e pela geração da árvore de análise sintática.
+- ```Parser.py```: Arquivo responsável pela análise sintática do código fonte Tiny e pela geração da árvore de análise sintática.
 - ```Expressoes.py```: Contém classes para representar expressões aritméticas e lógicas, bem como variáveis e entrada de usuário.
 - ```Comandos.py```: Contém as classes que representam os diferentes tipos de comandos suportados pela linguagem Tiny, como atribuição, saída, condicionais e loops.
+- ```main.py```: Arquivo de Execução
 
 <strong><h4>Classe base: Lexeme.py :</h4></strong>
 
@@ -54,18 +55,18 @@ class Lexema:
 No terminal, execute as seguintes instruções:
 ```
 cd Interpretador_Tiny
-python3 Parser.py
+python3 main.py
 ```
-- Para modificar o arquivo teste, utilize a função ```iniciar_maquina_de_estados```, substituindo "somatorio.tiny" por qualquer um dos nove arquivos contidos na pasta ```Testes_Interpretador```.
+- Para modificar o arquivo teste, modifique a string ```nome_arq```, substituindo "somatorio.tiny" por qualquer um dos nove arquivos contidos na pasta ```Testes_Interpretador```.
 
-<strong><h4>Função de inicialização (leitura):</h4></strong>
+<strong><h4>main.py:</h4></strong>
 
 ```python
-def iniciar_maquina_de_estados(self):
-    self.Maquina = Maquina_de_Estados(False, ' ')
-    self.Maquina.analizador_lexico(self.Maquina.ler_arquivo('Testes_Interpretador/somatorio.tiny'))
-    self.lista = self.Maquina.lista_de_Tokens
-    self.token_aux = self.lista[self.controle]
+def main ():
+    nome_arq = 'Testes_Interpretador/somatorio.tiny'
+    Interpretador = Parser()
+    object_interpretador = Interpretador.inicio(nome_arq)
+    object_interpretador.executar()
 ```
 
 ## Especificações do Dispositivo Utilizado
