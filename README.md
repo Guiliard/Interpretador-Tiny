@@ -59,6 +59,20 @@ No terminal, execute as seguintes instruções:
 cd Interpretador_Tiny
 python3 main.py
 ```
+
+<strong><h4>Exemplo de Execução (Somatorio.tiny):</h4></strong>
+```
+python3 main.py
+4
+8
+15
+16
+23
+42
+0
+108
+```
+
 - Para alterar o arquivo teste, modifique a string ```nome_arq```, contida no arquivo ```main.py```, substituindo "somatorio.tiny" por qualquer um dos nove arquivos contidos na pasta ```Testes_Interpretador```.
 
 ## Especificações do Dispositivo Utilizado
