@@ -4,6 +4,24 @@
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg"/> 
 <img align="center" height="20px" width="90px" src="https://img.shields.io/badge/Contributions-welcome-brightgreen.svg?style=flat"/>
 </div>
+<br>
+
+```
+<program>   ::= program <cmdlist>
+<cmdlist>   ::= <cmd> { <cmd> }
+<cmd>       ::= (<assign> | <output> | <if> | <while>) ;
+<assign>    ::= <var> = <intexpr>
+<output>    ::= output <intexpr>
+<if>        ::= if <boolexpr> then <cmdlist> [ else <cmdlist> ] done
+<while>     ::= while <boolexpr> do <cmdlist> done
+<boolexpr>  ::= false | true |
+                not <boolexpr> |
+                <intterm> (== | != | < | > | <= | >=) <intterm>
+<intexpr>   ::= [ + | - ] <intterm> [ (+ | - | * | / | %) <intterm> ]
+<intterm>   ::= <var> | <const> | read
+<var>       ::= id
+<const>     ::= number
+```
 
 ## Introdução
 
@@ -18,7 +36,7 @@ O objetivo deste projeto é desenvolver um interpretador para a linguagem Tiny, 
 - Operadores Aritméticos e Lógicos Suportados: Adição (+), subtração (-), multiplicação (*), divisão (/), resto da divisão (%), igual (==), diferente (!=), menor (<), maior (>), menor ou igual (<=) e maior ou igual (>=).
 - Comentários: Comentários de uma linha são definidos a partir do símbolo <i>hashtag</i> (#).
 
-<strong><h4>Exemplo de programa em Tiny: Somatorio.tiny :</h4></strong>
+<strong><h4>Exemplo de programa em Tiny: Somatorio.tiny</h4></strong>
 ```
 # somatorio em tiny
 program
