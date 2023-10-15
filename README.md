@@ -51,7 +51,7 @@ class Lexema:
 
 ## Instruções de Execução
 
-No terminal, execute a seguinte instrução:
+No terminal, execute as seguintes instruções:
 ```
 cd Interpretador_Tiny
 python3 Parser.py
