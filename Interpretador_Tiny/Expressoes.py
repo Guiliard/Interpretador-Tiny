@@ -118,7 +118,7 @@ class Binary_Int_Expr (Expr):
         elif self.operation == self.Operators.MUL:
             return expr1 * expr2
         elif self.operation == self.Operators.DIV:
-            return expr1 / expr2
+            return int(expr1 / expr2)
         elif self.operation == self.Operators.MOD:
             return expr1 % expr2
             
@@ -130,7 +130,7 @@ class Variable (Expr):
     def __init__(self, nome):
         super().__init__(-1)
         self.nome = nome
-        self.valor = 0 # ERRO AQUI
+        self.valor = 0 
         
     def retorna_variavel(self, nome):
         var = self.variables_map.get(nome)
