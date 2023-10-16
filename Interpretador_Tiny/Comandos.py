@@ -33,7 +33,7 @@ class Blocks_Command(Command):
             object.executar()
             
 
-class Assign_Command(Command): # DEU ERRO AQUI
+class Assign_Command(Command):
     
     def __init__(self, linha, variable, expr):
         super().__init__(linha)
@@ -45,7 +45,7 @@ class Assign_Command(Command): # DEU ERRO AQUI
         self.variable.set_valor(valor)
         
 
-class Output_Command(Command): #ERRO AQUI
+class Output_Command(Command):
     
     def __init__(self, linha, expr):
         super().__init__(linha)
