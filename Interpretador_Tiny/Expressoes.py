@@ -95,7 +95,7 @@ class Read_Int_Expr (Expr):
     
 class Binary_Int_Expr (Expr):
     
-    Operators = Enum('Operators', ['ADD','SUB','MUL','DIV','MOD'])       
+    Operators = Enum('Operators', ['ADD','SUB','MUL','DIV','POW','MOD'])       
     
     def __init__(self, linha, left, operation, right):
         super().__init__(linha)
@@ -119,6 +119,8 @@ class Binary_Int_Expr (Expr):
             return expr1 * expr2
         elif self.operation == self.Operators.DIV:
             return int(expr1 / expr2)
+        elif self.operation == self.Operators.POW:
+            return expr1 ** expr2
         elif self.operation == self.Operators.MOD:
             return expr1 % expr2
             
