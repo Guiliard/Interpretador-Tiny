@@ -26,6 +26,7 @@ TipoToken = Enum(
 	'SUB',           # -
 	'MUL',           # *
 	'DIV',           # /
+	'POW',           # ^
 	'MOD',           # %
 
 	# Keywords
