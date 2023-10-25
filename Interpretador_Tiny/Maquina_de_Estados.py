@@ -60,7 +60,7 @@ class Maquina_de_Estados:
                         controle = controle + 1
                         estado = 4
                     
-                    elif conteudo[controle] == ';' or conteudo[controle] == '+' or  conteudo[controle] == '-' or conteudo[controle] == '*' or conteudo[controle] == '%' or conteudo[controle] == '/':
+                    elif conteudo[controle] == ';' or conteudo[controle] == '+' or  conteudo[controle] == '-' or conteudo[controle] == '*' or conteudo[controle] == '%' or conteudo[controle] == '/' or conteudo[controle] == '^':
                         string_token = string_token + conteudo[controle]
                         controle = controle + 1
                         estado = 7
