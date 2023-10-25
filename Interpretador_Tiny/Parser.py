@@ -201,7 +201,7 @@ class Parser:
             Bool_Expr = Single_Bool_Expr (line, object_expr_left, log_op, object_expr_right)
             return Bool_Expr
 
-    # <intexpr> ::= [ + | - ] <intterm> [ (+ | - | * | / | %) <intterm> ]
+    # <intexpr> ::= [ + | - ] <intterm> [ (+ | - | * | / | ^ | %) <intterm> ]
     def procIntExpr(self):
         boolean = False 
         
