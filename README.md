@@ -17,7 +17,7 @@
 <boolexpr>  ::= false | true |
                 not <boolexpr> |
                 <intterm> (== | != | < | > | <= | >=) <intterm>
-<intexpr>   ::= [ + | - ] <intterm> [ (+ | - | * | / | %) <intterm> ]
+<intexpr>   ::= [ + | - ] <intterm> [ (+ | - | * | / | ^ | %) <intterm> ]
 <intterm>   ::= <var> | <const> | read
 <var>       ::= id
 <const>     ::= number
@@ -33,7 +33,7 @@ O objetivo deste projeto é desenvolver um interpretador para a linguagem Tiny, 
 - Comandos Suportados: O interpretador suporta quatro tipos de comandos: comandos condicionais (if), comandos de repetição (while), comandos de atribuição (id = expr) e comandos de saída (output expr).
 - Expressões Lógicas e Aritméticas: A linguagem suporta expressões lógicas simples em comandos condicionais e de repetição, bem como expressões aritméticas sobre números inteiros.
 - Variáveis e Entrada de Usuário: Identificadores (variáveis) podem ser usados para armazenar números inteiros. Além disso, a linguagem suporta leitura de valores inteiros do usuário (read).
-- Operadores Aritméticos e Lógicos Suportados: Adição (+), subtração (-), multiplicação (*), divisão (/), resto da divisão (%), igual (==), diferente (!=), menor (<), maior (>), menor ou igual (<=) e maior ou igual (>=).
+- Operadores Aritméticos e Lógicos Suportados: Adição (+), subtração (-), multiplicação (*), divisão (/), exponenciação (^), resto da divisão (%), igual (==), diferente (!=), menor (<), maior (>), menor ou igual (<=) e maior ou igual (>=).
 - Comentários: Comentários de uma linha são definidos a partir do símbolo <i>hashtag</i> (#).
 
 <strong><h4>Exemplo de programa em Tiny: Somatorio.tiny</h4></strong>
