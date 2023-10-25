@@ -1,0 +1,9 @@
+program 
+    base = read;
+    exp = read;
+    pow = base;
+    while exp > 1 do
+        pow = pow * base;
+        exp = exp - 1;
+    done;
+    output pow;
